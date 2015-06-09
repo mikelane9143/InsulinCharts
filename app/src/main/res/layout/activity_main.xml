@@ -1,0 +1,103 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+    android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+    <TextView android:text="@string/chart_select" android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/selChart_Label" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/bgl_label"
+        android:id="@+id/bgl_Label"
+        android:layout_above="@+id/bglNum"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/bglNum"
+        android:editable="true"
+        android:contentDescription="@string/enter_bgl"
+        android:layout_centerVertical="true"
+        android:layout_alignStart="@+id/exchNum"
+        android:hint="0.0"
+        android:inputType="numberDecimal"
+        android:numeric="decimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/exch_label"
+        android:id="@+id/exch_Label"
+        android:layout_above="@+id/exchNum"
+        android:layout_alignParentStart="true" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/exchNum"
+        android:editable="true"
+        android:contentDescription="@string/enter_exch"
+        android:layout_above="@+id/calc_Dosage"
+        android:layout_toEndOf="@+id/calc_Dosage"
+        android:layout_marginBottom="28dp"
+        android:hint="0.0"
+        android:inputType="numberDecimal"
+        android:numeric="decimal" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/insulin_label"
+        android:id="@+id/rec_Dosage_Label"
+        android:layout_above="@+id/txtInsulinDose"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge"
+        android:text="@string/initial_value"
+        android:id="@+id/txtInsulinDose"
+        android:contentDescription="@string/dose_descrip"
+        android:layout_alignParentBottom="true"
+        android:layout_alignEnd="@+id/exchNum"
+        android:inputType="numberDecimal"
+        android:numeric="decimal" />
+
+    <Button
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/calc_button"
+        android:id="@+id/calc_Dosage"
+        android:layout_above="@+id/rec_Dosage_Label"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="22dp" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/insulinTypeSpinner"
+        android:clickable="true"
+        android:prompt="@string/insulinListDescription"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/selChart_Label"
+        android:layout_alignStart="@+id/rec_Dosage_Label" />
+
+    <Spinner
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chartIndexSpinner"
+        android:layout_marginTop="24dp"
+        android:prompt="@string/chartIndexSelect"
+        android:spinnerMode="dropdown"
+        android:layout_below="@+id/insulinTypeSpinner"
+        android:layout_alignStart="@+id/insulinTypeSpinner" />
+
+</RelativeLayout>

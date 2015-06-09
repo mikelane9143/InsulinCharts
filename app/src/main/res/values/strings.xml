@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Insulin Charts</string>
+    <string name="chart_select">Select insulin chart</string>
+    <string name="bgl_label">What was your BGL?</string>
+    <string name="exch_label">How many exchanges for your meal?</string>
+    <string name="insulin_label">From the selected chart, the recommended dosage is:</string>
+    <string name="action_settings">Settings</string>
+    <string name="enter_bgl">Please enter BGL reading</string>
+    <string name="enter_exch">Please enter planned exchanges</string>
+    <string name="initial_value">0.0</string>
+    <string name="dose_descrip">This dose is recommended from the chart selected where the BGL (rounded down), and carb exchanges (rounded up) are cross referenced.</string>
+    <string name="select_chart">Please use the buttons to select the correct chart</string>
+    <string name="calc_button">Calculate Dosage</string>
+    <string name="insulinListDescription">Select the charts based on the type of insulin</string>
+    <string name="insulinTypeTitle">Insulin type</string>
+    <string name="chartIndexSelect">Select the index value of the chart to be used</string>
+    <string-array name="insulinTypeArray">
+        <item>NovoRapid</item>
+    </string-array>
+    <string-array name="novoRapIndexArray">
+        <item>0.75</item>
+        <item>0.9</item>
+        <item>1.2</item>
+        <item>1.5</item>
+        <item>1.8</item>
+        <item>2.1</item>
+    </string-array>
+    <string name="dataFile">NovoRapid.xml</string>
+
+</resources>
